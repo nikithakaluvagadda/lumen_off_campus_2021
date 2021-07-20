@@ -9,6 +9,7 @@ import com.training.model.CreditCard;
 import com.training.model.Customer;
 import com.training.services.CreditCardService;
 import com.training.utils.CardHolderNameComparator;
+import com.training.utils.CreditLimitComparator;
 
 public class Application {
 
@@ -42,7 +43,7 @@ public class Application {
 
 		CreditCardService service = new CreditCardService();
 		
-		CreditCard card1 = new CreditCard(1010, "Ramesh", 700000, 47473734);
+		CreditCard card1 = new CreditCard(1010, "Ramesh", 7, 47473734);
 		
 		
 		service.addCard(card1);
@@ -50,9 +51,9 @@ public class Application {
 		System.out.println(service.getCardList());
 		
 		
-		CreditCard card2 = new CreditCard(7010, "Zahir", 705000, 4747754);
-		CreditCard card3 = new CreditCard(3010, "Anand", 800000, 4747734);
-		CreditCard card4 = new CreditCard(4010, "Chandru", 1700000, 4773934);
+		CreditCard card2 = new CreditCard(7010, "Zahir", 5, 4747754);
+		CreditCard card3 = new CreditCard(3010, "Anand", 8, 4747734);
+		CreditCard card4 = new CreditCard(4010, "Chandru", 17, 4773934);
 		
 		
 		service.addCard(card2,card3,card4);
@@ -93,7 +94,9 @@ public class Application {
 		Collections.sort(list,new CardHolderNameComparator());
 		
 		print(list);
-		
+		System.out.println("Sort by credit limit");
+		Collections.sort(list,new CreditLimitComparator());
+		print(list);		
 		 
 		
 	}

@@ -23,15 +23,15 @@ public class UsingHashMap {
 		
 		Object resp1 =bookList.put(3, html);
 		
-		//Object resp2 =bookList.put(3, html);
+		Object resp2 =bookList.put(3, html);
 		
 		
-		//System.out.println(bookList.get(2));
+		System.out.println(bookList.get(2));
 		
 		
 		System.out.println("Response -1"+ resp1);
 		
-		//System.out.println("Response -2"+ resp2);
+		System.out.println("Response -2"+ resp2);
 		
 		    
 		    Set<Map.Entry<Integer, Book>>  setViewOfMap = bookList.entrySet();

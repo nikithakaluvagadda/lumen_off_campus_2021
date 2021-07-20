@@ -17,6 +17,7 @@ public class MyAnnotationProcessor {
 		try {
 			Method  methodRef = classRef.getMethod("showDetails");
 			
+			
 			                   
 			
 			Example anno = methodRef.getAnnotation(Example.class);
@@ -26,6 +27,11 @@ public class MyAnnotationProcessor {
 			 buffer.append(anno.version());
 			 
 			System.out.println("Annotation Processing Result"+ buffer.toString());
+			Example anno1 = classRef.getAnnotation(Example.class);
+			StringBuffer buffer1 = new StringBuffer(anno1.title());
+			 buffer1.append(anno1.version());
+			 
+			System.out.println("Annotation Processing Result"+ buffer1.toString());
 			
 			
 		} catch (NoSuchMethodException e) {

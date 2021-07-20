@@ -7,7 +7,7 @@ public class PrintString {
 		
 	}
 	
-	public synchronized static void print(String str1,String str2) {
+	public  synchronized static void print(String str1,String str2) {
 
 		
 	//	System.out.println(Thread.currentThread().getName());

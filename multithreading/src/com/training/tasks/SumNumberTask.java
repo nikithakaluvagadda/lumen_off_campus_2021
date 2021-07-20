@@ -20,7 +20,7 @@ public class SumNumberTask implements Runnable {
 			sum=sum+i;
 		}
 		
-		System.out.println(Thread.currentThread().getName() +" =Result = "+sum);
+		System.out.println("thread name:"+Thread.currentThread().getName() +" =Result = "+sum);
 	}
 
 	
